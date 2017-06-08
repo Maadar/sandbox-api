@@ -1,0 +1,11 @@
+<div ng-repeat="singleGallery in vm.galleries">
+  <div class="gallery component">
+    <h2>Tag: {{ singleGallery.tagName }}</h2>
+    <img ng-repeat="image in singleGallery.list" ng-src="{{ image }}" alt="img">
+    <button ng-click="vm.removeItem($index)">X</button>
+  </div>
+</div>
+
+<input type="text" ng-model="vm.tag" ng-keypress="$event.key === 'Enter' ? vm.addItem() : ''">
+<button ng-click="vm.addItem()">Fetch Images</button>
+<div ng-if="vm.error">Wprowadz nazwe tagu</div>
