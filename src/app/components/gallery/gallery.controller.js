@@ -45,8 +45,6 @@
 
        this.addGalleryToList(customTagName);
      })
-     .catch(() => {
-     });
    }
 
    addGalleryToList(customTagName) {
